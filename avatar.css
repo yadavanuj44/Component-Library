@@ -1,0 +1,18 @@
+.avatar{
+    border-radius: 50%;
+}
+.xs{
+    width: 2em;
+}
+.sm{
+    width: 5rem;
+}
+.md{
+    width: 10rem;
+}
+.lr{
+    width: 10rem;
+}
+.xl{
+    width: 12rem;
+}

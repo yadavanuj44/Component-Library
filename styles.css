@@ -1,3 +1,12 @@
+@import url("avatar.css");
+
+
+
+
+
+img, embed, object, video{
+    max-width: 100%;
+}
 :root{
     --accent-color : rgb(204,0,0);
     --lightest-gray : rgb(240,240,240);
@@ -10,6 +19,7 @@
 }
 body{
     margin: 0;
+    font-size: 10px;
 }
 *,*::before, *::after{
     box-sizing: border-box;
@@ -58,7 +68,7 @@ body{
 .sidebar .hidden-sidebar{
     opacity: 0;
     width: 0;
-    transition: opacity var(--animation-duration) var(--animation-timing-curve);
+    transition: all var(--animation-duration) var(--animation-timing-curve);
 }
 .sidebar.open .hidden-sidebar{
     width: 100%;
@@ -93,7 +103,12 @@ body{
 .middle-sidebar, .bottomsidebar{
     width: 100%;
 }
-
+.middle-sidebar .hidden-sidebar{
+    padding-left: 1rem;
+}
+.bottom-sidebar .hidden-sidebar{
+    padding-left: 1rem;
+}
 .container{
     display: flex;
 }
