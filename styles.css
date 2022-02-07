@@ -2,24 +2,36 @@
 
 
 
-
-
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
 img, embed, object, video{
     max-width: 100%;
 }
 :root{
-    --accent-color : rgb(204,0,0);
+    --accent-color : #8b5cf6;
+    --secondary-color : #C7F65C;
     --lightest-gray : rgb(240,240,240);
     --light-gray : rgb(144,144,144);
     --medium-gray : rgb(96,96,96);
     --dark-gray : rgb(13,13,13);
-    --header-height : 40px;
+    --header-height : 50px;
     --animation-duration: 500ms;
     --animation-timing-curve: ease-in-out;
 }
 body{
     margin: 0;
-    font-size: 10px;
+    font-size: 1.6rem;
 }
 *,*::before, *::after{
     box-sizing: border-box;
@@ -42,8 +54,9 @@ body{
 .menu-icon{
     width: 25px;
     height: 25px;
-    fill:var(--medium-gray);
+    fill:var(--accent-color);
     cursor: pointer;
+    margin-left: 1rem;
 }
 .menu-icon:hover{
     fill: var(--dark-gray);
@@ -114,6 +127,10 @@ body{
 }
 .content{
     margin: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .sidebar-list{
     margin: 0;
@@ -147,11 +164,11 @@ body{
 .sidebar-list-item{
     position: relative;
     width: 100%;
-    fill: var(--light-gray);
+    fill: white;
 }
 .sidebar-list-item.active{
-    fill: var(--accent-color);
-    background-color: var(--lightest-gray);
+    fill: White;
+    background-color: var(--accent-color);
 }
 .sidebar-list-item:hover{
     background-color: var(--lightest-gray);
@@ -170,14 +187,14 @@ body{
 
 .lib-heading{
     color: var(--dark-gray);
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.25rem;
     margin-top: 0.5rem;
 }
 .name-heading{
     color: var(--medium-gray);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .sidebar .top-sidebar{
     height: 30px;
@@ -190,4 +207,39 @@ body{
 .top-sidebar .hidden-sidebar{
     text-align: center;
     width: 100%;
+}
+
+
+.heading{
+    color: var(--accent-color);
+}
+
+
+.components-holder {
+    width: 100%;
+    height: 208px;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.components-holder>div {
+    height: 208px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.components-holder>div:hover {
+    cursor: pointer;
+}
+.components-holder>div:hover>img {
+    border: 3px solid var(--accent-color);
+}
+.components-holder>div:hover>h3 {
+    color: var(--accent-color);
 }
